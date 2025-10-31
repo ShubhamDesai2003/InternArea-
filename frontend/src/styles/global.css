@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ---------- Global Reset & Base Styles ---------- */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #f9fafb; /* subtle light background */
+  color: #111827; /* dark neutral text */
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ---------- Reusable Utility Classes ---------- */
+
+/* Center content vertically & horizontally */
+.center {
+  @apply flex items-center justify-center;
+}
+
+/* Button base style */
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-all;
+}
+
+/* Primary button */
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800;
+}
+
+/* Secondary button */
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+}
+
+/* Card style */
+.card {
+  @apply bg-white shadow-sm rounded-2xl p-4 transition hover:shadow-md;
+}
+
+/* Smooth fade-in for page transitions */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Scrollbar (optional aesthetic) ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
