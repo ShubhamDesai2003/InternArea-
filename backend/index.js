@@ -7,7 +7,6 @@ import { connectDB } from "./db.js";
 import internshipRoutes from "./routes/internshipRoutes.js";
 import jobRoutes from "./routes/jobRoutes.js";
 import applicationRoutes from "./routes/applicationRoutes.js";
-import uploadRoutes from "./routes/uploadRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -25,7 +24,6 @@ app.use("/uploads", express.static("uploads"));
 app.use("/api/internship", internshipRoutes);
 app.use("/api/job", jobRoutes);
 app.use("/api/application", applicationRoutes);
-app.use("/api/upload", uploadRoutes);
 
 // ✅ Base test
 app.get("/", (req, res) => {
