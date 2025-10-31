@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { RootState } from "@reduxjs/toolkit/query";
+import type { RootState } from "../../store"; 
 import { useRouter } from "next/router";
 import Layout from "@/src/components/Layout";
-import Sidebar from "@/src/components/profile/sidebar";
+import Sidebar from "@/src/components/profile/Sidebar";
 import ProfileInfo from "@/src/components/profile/ProfileInfo";
 import ApplicationCard from "@/src/components/profile/ApplicationCard";
 import { axiosClient } from "@/src/lib/axiosClient";

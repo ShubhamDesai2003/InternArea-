@@ -1,7 +1,7 @@
 interface Application {
   id: number;
   title: string;
-  comapany: string;
+  company: string;
   status: string;
   type: string;
 }

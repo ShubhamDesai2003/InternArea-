@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
-import { RootState } from "@reduxjs/toolkit/query";
+import type { RootState } from "../../store"; 
+
 
 export default function ProfileInfo() {
   const user = useSelector((state: RootState) => state.user.user);

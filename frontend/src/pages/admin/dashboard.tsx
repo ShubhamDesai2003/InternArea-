@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { UseSelector, useDispatch, useSelector } from "react-redux";
-import { RootState } from "@reduxjs/toolkit/query";
+import type { RootState } from "../../store"; 
 import { logout } from "@/src/features/userSlice";
 import { useRouter } from "next/router";
 import Layout from "@/src/components/Layout";

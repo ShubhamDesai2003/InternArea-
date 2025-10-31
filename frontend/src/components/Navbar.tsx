@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "@reduxjs/toolkit/query";
+import type { RootState } from "../store"; 
 import { logout } from "../features/userSlice";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase/firebase";

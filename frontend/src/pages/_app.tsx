@@ -12,7 +12,7 @@ function AuthListener() {
   const dispatch = useDispatch();
   useEffect(() => {
     const unsub = auth.onAuthStateChanged((user) => {
-      if (user) dispatch(login({ uid: user.uid, email: user.email }));
+      if (user) dispatch(login({ uid: user.uid, email: user.email ?? "" }));
       else dispatch(logout());
     });
     return () => unsub();

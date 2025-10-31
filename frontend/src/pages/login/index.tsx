@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import {
   createUserWithEmailAndPassword,
@@ -26,7 +27,7 @@ export default function LoginPage() {
         : await signInWithEmailAndPassword(auth, email, password);
 
       const user = userCred.user;
-      dispatch(login({ uid: user.uid, email: user.email }));
+      dispatch(login({ uid: user.uid, email: user.email ?? "" }));
       router.push("/profile");
     } catch (err: any) {
       setError(err.message);

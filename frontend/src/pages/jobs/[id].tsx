@@ -83,7 +83,7 @@ export default function JobDetailPage() {
         <ApplyModal
           isOpen={modalOpen}
           onClose={() => setModalOpen(false)}
-          type="Job"
+          type="job"
           id={job._id}
           userId={user?.uid || ""}
         />

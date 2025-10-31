@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 interface Job {
-  id: number;
+  _id?: string;
+  id?: string;
   title: string;
   company: string;
   location: string;

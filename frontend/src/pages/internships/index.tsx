@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import Layout from "@/src/components/Layout";
 import FilterBar from "@/src/components/internships/FilterBar";
-import InternshipCard from "@/src/components/internships/internshipCard";
+import InternshipCard from "@/src/components/internships/InternshipCard";
 import { axiosClient } from "@/src/lib/axiosClient";
 
 export default function InternshipPage() {

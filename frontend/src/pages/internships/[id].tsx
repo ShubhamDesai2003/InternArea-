@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Layout from "@/src/components/Layout";
@@ -13,7 +14,8 @@ export default function InternshipDetailsPage() {
   const user = useSelector((state: RootState) => state.user.user);
   const [modalOpen, setModalOpen] = useState(false);
 
-  const [internship, setInternship] = useState<any[]>([]);
+  const [internship, setInternship] = useState<any | null>(null);
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -47,12 +49,13 @@ export default function InternshipDetailsPage() {
       </Layout>
     );
 
-  if (!internship)
-    return (
-      <Layout>
-        <p className="text-center text-gray-500 mt-10">Internship not found</p>
-      </Layout>
-    );
+    if (!internship)
+      return (
+        <Layout>
+          <p className="text-center text-gray-500 mt-10">Internship not found</p>
+        </Layout>
+      );
+    
 
   return (
     <Layout>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import Layout from "@/src/components/Layout";
 import FilterBar from "@/src/components/jobs/FilterBar";

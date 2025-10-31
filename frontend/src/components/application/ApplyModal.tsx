@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import { axiosClient } from "@/src/lib/axiosClient";
 
@@ -40,7 +41,7 @@ export default function ApplyModal({
         alert(`${type} applied succesfully`);
         onClose();
       }
-    } catch (err) {
+    } catch (err: any) {
       if (err.response?.status === 409) alert("you've already applied!");
       else alert("Something went wrong. Try again.");
     } finally {
