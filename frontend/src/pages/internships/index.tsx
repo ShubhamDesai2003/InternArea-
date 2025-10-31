@@ -14,6 +14,7 @@ export default function InternshipPage() {
   const fetchInternships = async () => {
     try {
       const res = await axiosClient.get("/internship");
+      console.log("Internship");
       setInterships(res.data);
     } catch (err) {
       console.error(err);
