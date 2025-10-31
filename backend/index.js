@@ -4,10 +4,10 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import { connectDB } from "./db.js";
 
-import internshipRoutes from "./Routes/internshipRoutes.js";
-import jobRoutes from "./Routes/jobRoutes.js";
-import applicationRoutes from "./Routes/applicationRoutes.js";
-import uploadRoutes from "./Routes/uploadRoutes.js";
+import internshipRoutes from "./routes/internshipRoutes.js";
+import jobRoutes from "./routes/jobRoutes.js";
+import applicationRoutes from "./routes/applicationRoutes.js";
+import uploadRoutes from "./routes/uploadRoutes.js";
 
 dotenv.config();
 const app = express();
