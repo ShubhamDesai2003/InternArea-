@@ -12,8 +12,29 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-// ✅ Middleware
-app.use(cors());
+// ==============================================
+// ✅ Secure & Flexible CORS Setup
+// ==============================================
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://intern-area.vercel.app",
+  "https://intern-area-mg054o7np-shubhamtheboss-projects.vercel.app",
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) === -1) {
+        const msg = `CORS policy does not allow access from ${origin}`;
+        return callback(new Error(msg), false);
+      }
+      return callback(null, true);
+    },
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 app.use(bodyParser.json());
 
