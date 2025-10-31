@@ -16,16 +16,19 @@ const PORT = process.env.PORT || 4000;
 // ✅ Secure & Flexible CORS Setup
 // ==============================================
 
-app.use(
-  cors({
-    origin: [
-      "https://intern-area-90uivgze5-shubhamtheboss-projects.vercel.app",
-      "http://localhost:3000", // for local testing
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: [
+//       "https://intern-area-90uivgze5-shubhamtheboss-projects.vercel.app",
+//       "http://localhost:3000", // for local testing
+//     ],
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     credentials: true,
+//   })
+// );
+
+app.use(cors({ origin: "*"}));
+
 
 app.use(express.json());
 app.use(bodyParser.json());
