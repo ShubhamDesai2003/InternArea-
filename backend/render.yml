@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: internarea-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm run start
+    plan: free
+    envVars:
+      - key: MONGO_URL
+        sync: false
