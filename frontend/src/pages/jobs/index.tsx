@@ -14,6 +14,7 @@ export default function JobPage() {
   const fetchJobs = async () => {
     try {
       const res = await axiosClient.get("/job");
+      console.log("Jobs");
       setJobs(res.data);
     } catch (err) {
       console.error(err);
